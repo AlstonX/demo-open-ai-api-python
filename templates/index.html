@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat With History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main class="chat-shell">
+      <section class="chat-panel" aria-label="Chat with history">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">OpenAI API Demo</p>
+            <h1>Chat With History</h1>
+          </div>
+          <button class="icon-button" id="clearButton" type="button" aria-label="Clear chat" title="Clear chat">
+            <span aria-hidden="true">↺</span>
+          </button>
+        </header>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <div class="empty-state" id="emptyState">
+            <h2>Start a conversation</h2>
+            <p>Your messages and assistant replies stay in context until you clear the chat.</p>
+          </div>
+        </div>
+
+        <form class="composer" id="chatForm">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea id="messageInput" name="message" rows="1" placeholder="Ask something..." required></textarea>
+          <button id="sendButton" type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

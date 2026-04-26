@@ -66,6 +66,14 @@ python chat_with_history.py
 
 In the interactive chat, type `clear` to clear chat history, or `quit`, `exit`, `bye`, or `stop` to end the session.
 
+Start the web chat UI:
+
+```powershell
+python app.py
+```
+
+Then open http://127.0.0.1:5000 in your browser. The web UI uses the same `ChatWithHistory` class, keeps conversation history on the Flask server, and includes a clear button for resetting the chat.
+
 ## Notes
 
 Do not commit your real `.env` file or API key. This repository includes `.env.example` only as a safe template.
